@@ -1,0 +1,4 @@
+Requests
+click
+public
+setuptools

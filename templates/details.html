@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home page</title>
+ <link href="{% static 'css\site.css' %}" rel="stylesheet" type="text/css">
+ <link href="{% static 'lib\bootstrap\dist\css\bootstrap.css' %}" rel="stylesheet" type="text/css">
+<script src="{% static 'lib\bootstrap\dist\js\bootstrap.js'%}"></script>
+<script src="{% static 'lib\jquery\dist\jquery.js' %}"></script>
+
+
+
+</head>
+<body>
+
+<br/><br/>
+{% block content %}
+<div class="container" style="text-align: center">
+
+   <h1>Thank you! For teaching me something new! </h1>
+   <div class="align-content-center" style="text-align: center;">
+   <p>I learn by train my mind, much like a human does </p>
+       <div style="display: inline-block">
+             <h2>Introduction</h2>
+             <p>Every time when people use me, my knowledge of Sentiment Analysis Increases</p>
+             <div class="card" style="display: inline-block">
+               <img class="card-img-top" src="{% static 'images\images.png' %}" alt="Card image" style="width:100%">
+               <div class="card-body">
+                 <h4 class="card-title" style="color:blue;">Alexa</h4>
+                 <span>Response Type: {{ title }}</span>
+                   {% if title == 'neg' %}
+
+                       <p class="card-text"> <span style="color:#dc0000"> {{  neg_response   }}   </span></p>
+                   {% else %}
+                          <p class="card-text"><span style="color:#ffc107"> {{  pos_response  }} </span> </p>
+                   {% endif %}
+
+                 <a href="/" class="btn btn-primary">Try Again</a>
+               </div>
+             </div>
+       </div>
+   </div>
+    <div></div><br/>
+
+</div>
+{% endblock content %}
+</body>
+</html>

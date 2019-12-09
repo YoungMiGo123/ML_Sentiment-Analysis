@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home page</title>
+ <link href="{% static 'css\site.css' %}" rel="stylesheet" type="text/css">
+ <link href="{% static 'lib\bootstrap\dist\css\bootstrap.css' %}" rel="stylesheet" type="text/css">
+<script src="{% static 'lib\bootstrap\dist\js\bootstrap.js'%}"></script>
+<script src="{% static 'lib\jquery\dist\jquery.js' %}"></script>
+
+
+
+</head>
+<body>
+
+<br/><br/>
+{% block content %}
+<div class="container">
+
+   <h1>{{ title }}</h1>
+   <div class="align-content-center" style="text-align: center;">
+   <p>South Africa's First Text classifying application! Alexa Below with direct you on how to get started </p>
+       <div style="display: inline-block">
+             <h2>Introduction</h2>
+             <p>Our program is super simple to use, and suuuper! user friendly</p>
+             <div class="card" style="width:400px">
+               <img class="card-img-top" src="{% static 'images\images.png' %}" alt="Card image" style="width:100%">
+               <div class="card-body">
+                 <h4 class="card-title">Alexa</h4>
+                 <p class="card-text">To get started is easy, simply click the button below to start</p>
+                 <a href="/result" class="btn btn-primary">Start</a>
+               </div>
+             </div>
+       </div>
+   </div>
+    <div></div><br/>
+
+</div>
+{% endblock content %}
+</body>
+</html>
